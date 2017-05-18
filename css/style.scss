@@ -1,0 +1,184 @@
+@import "compass";
+
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #FFF4EB;
+$subColor: #AA886C;
+$keyColor: #449F55;
+$whiteColor: #EEEEEE;
+$fontColor: #4c4c4c;
+
+/* Bass
+----------------------------------------------------------------*/
+
+
+html{ font-size: 62.5%; }
+
+body{
+    color: $fontColor;
+    font-size: 1.4rem;
+    font-family: $baseFontFamily;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+    background-color: $baseColor;
+}
+
+a{
+    @include link-colors($keyColor,$keyColor,lighten($keyColor,5%));
+    text-decoration: none;
+}
+
+
+/* Align
+------------------------------------------------------------------*/
+.text-center{
+    text-align: center;
+}
+
+
+/* Layout
+------------------------------------------------------------------*/
+.block-center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/*PC表示
+--------------------------------------------------------------------*/
+@media (min-width: 769px){
+    /* Base
+  ------------------------------------------------------------*/
+    a {
+        @include link-colors($keyColor,darken($keyColor,10%),lighten($keyColor,5%));
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+
+
+/*Header
+--------------------------------------------------------------------------*/
+
+.header-image {
+    width:100%;
+    height:250px;
+    background-image: url("../images/croquette.jpg");
+    background-size: cover;
+    margin-bottom: 20px;
+    
+    /*PC表示*/
+    @media (min-width: 769px){
+        height:500px;
+    }
+}
+
+
+/*Title
+-------------------------------------------------------------------*/
+.title {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+/*Process
+--------------------------------------------------------------------*/
+.process-container{
+    width: 90%;
+    @extend .block-center;
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(column);
+    
+        /*PC表示*/
+        @media (min-width: 769px){
+            @include flex-direction(row);
+        }
+    
+    .process-box{
+        background-color: $whiteColor;
+        border: 6px $subColor double;
+        margin: 10px 0;
+        width: 100%;
+        min-height: 130px;
+        
+        /*PC表示*/
+        @media (min-width: 769px){
+            width: 33%;
+            margin-right:20px;
+            
+            &:last-child{
+                margin-right: 0px;
+            }
+        }
+        
+        
+        .process-title{
+            background-color: $subColor;
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow:
+            -1px -1px 1px #fff,
+            -1px 1px 1px #fff,
+            1px -1px 1px #fff,
+            1px 1px 1px #fff;
+        }
+    
+        .process-sentence{
+             padding: 35px 15px;
+             }
+    }
+    
+    margin-bottom: 40px;
+}
+
+
+/*Footer
+--------------------------------------------------------------------*/
+
+footer{
+    background-color: $subColor;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    
+    .footer-sentence {
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+        
+    .button {
+        display: block;
+        font-weight:bold;
+        text-align: center;
+        width: 130px;
+        padding:8px 10px 8px;
+        color: #fff;
+        background-color: $keyColor;
+        border-radius: 5px;
+        box-shadow:2px 2px darken($keyColor,10%);
+        text-shadow:-1px -1px darken($keyColor,20%);
+        text-decoration: none;
+        
+        /*PC表示*/
+        @media (min-width: 769px){
+            &:hover{
+                background-color: darken($keyColor,10%);
+                box-shadow:none;
+                color: #ddd;
+            }
+        }
+    }
+
+}

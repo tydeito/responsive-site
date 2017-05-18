@@ -1,3 +1,134 @@
+@charset "UTF-8";
+/* Bass
+----------------------------------------------------------------*/
+html {
+  font-size: 62.5%; }
 
+body {
+  color: #4c4c4c;
+  font-size: 1.4rem;
+  font-family: "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: #FFF4EB; }
+
+a {
+  color: #449F55;
+  text-decoration: none; }
+  a:hover {
+    color: #449F55; }
+  a:active {
+    color: #4cb15f; }
+
+/* Align
+------------------------------------------------------------------*/
+.text-center {
+  text-align: center; }
+
+/* Layout
+------------------------------------------------------------------*/
+.block-center, .process-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/*PC表示
+--------------------------------------------------------------------*/
+@media (min-width: 769px) {
+  /* Base
+------------------------------------------------------------*/
+  a {
+    color: #449F55; }
+    a:hover {
+      color: #357b42; }
+    a:active {
+      color: #4cb15f; }
+    a:hover {
+      text-decoration: underline; } }
+/*Header
+--------------------------------------------------------------------------*/
+.header-image {
+  width: 100%;
+  height: 250px;
+  background-image: url("../images/croquette.jpg");
+  background-size: cover;
+  margin-bottom: 20px;
+  /*PC表示*/ }
+  @media (min-width: 769px) {
+    .header-image {
+      height: 500px; } }
+
+/*Title
+-------------------------------------------------------------------*/
+.title {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px; }
+
+/*Process
+--------------------------------------------------------------------*/
+.process-container {
+  width: 90%;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  /*PC表示*/
+  margin-bottom: 40px; }
+  @media (min-width: 769px) {
+    .process-container {
+      -webkit-flex-direction: row;
+      flex-direction: row; } }
+  .process-container .process-box {
+    background-color: #EEEEEE;
+    border: 6px #AA886C double;
+    margin: 10px 0;
+    width: 100%;
+    min-height: 130px;
+    /*PC表示*/ }
+    @media (min-width: 769px) {
+      .process-container .process-box {
+        width: 33%;
+        margin-right: 20px; }
+        .process-container .process-box:last-child {
+          margin-right: 0px; } }
+    .process-container .process-box .process-title {
+      background-color: #AA886C;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: -1px -1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff, 1px 1px 1px #fff; }
+    .process-container .process-box .process-sentence {
+      padding: 35px 15px; }
+
+/*Footer
+--------------------------------------------------------------------*/
+footer {
+  background-color: #AA886C;
+  padding-top: 25px;
+  padding-bottom: 30px; }
+  footer .footer-sentence {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff; }
+  footer .button {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    width: 130px;
+    padding: 8px 10px 8px;
+    color: #fff;
+    background-color: #449F55;
+    border-radius: 5px;
+    box-shadow: 2px 2px #357b42;
+    text-shadow: -1px -1px #25582f;
+    text-decoration: none;
+    /*PC表示*/ }
+    @media (min-width: 769px) {
+      footer .button:hover {
+        background-color: #357b42;
+        box-shadow: none;
+        color: #ddd; } }
 
 /*# sourceMappingURL=style.css.map */
